@@ -45,17 +45,24 @@ if(isset($_POST['registro'])){//depues lo saco
     }
     //retorno mi respuesta
     die(json_encode($respuesta));
-  }
+  }//fin nuevo
 
     if($_POST['registro'] == 'actualizar'){
       $id_registro = $_POST['id_registro'];
-      $opciones = array(
-        'cost' => 12
-      );
+
       try {
-        $password_hashed = password_hash($password, PASSWORD_BCRYPT, $opciones);
-        $stmt = $conn->prepare('UPDATE admins SET usuario = ?, nombre = ?, password = ? WHERE id = ?');
-        $stmt->bind_param("sssi", $usuario, $nombre, $password_hashed, $id_registro);
+        if(empty($_POST['password'])){
+          $stmt = $conn->prepare('UPDATE admins SET usuario = ?, nombre = ?, editado = NOW() WHERE id = ?');
+          $stmt->bind_param("ssi", $usuario, $nombre, $id_registro);
+        }else{
+          $opciones = array(
+            'cost' => 12
+          );
+          $password_hashed = password_hash($password, PASSWORD_BCRYPT, $opciones);
+          $stmt = $conn->prepare('UPDATE admins SET usuario = ?, nombre = ?, password = ?, editado = NOW() WHERE id = ?');
+          $stmt->bind_param("sssi", $usuario, $nombre, $password_hashed, $id_registro);
+
+        }
         $stmt->execute();
         if($stmt->affected_rows){
           $respuesta = array(
@@ -78,15 +85,44 @@ if(isset($_POST['registro'])){//depues lo saco
       die(json_encode($respuesta));
     }
 
+      if($_POST['registro'] == 'eliminar'){
+        // die(json_encode($_POST));
+        $id_borrar = $_POST['id'];
+        try {
+            $stmt = $conn->prepare("DELETE FROM admins WHERE id = ?");
+            $stmt->bind_param("i", $id_borrar);
+            $stmt->execute();
+            if($stmt->affected_rows){
+              $respuesta = array(
+                'respuesta' => 'exito',
+                'id_eliminado' => $id_borrar
+              );
+            }else{
+              $respuesta = array(
+                'respuesta' => 'error'
+              );
+            }
+            $stmt->close();
+            $conn->close();
+        } catch (\Exception $e) {
+          $resultado = array(
+            'respuesta' =>  $e->getMessage()
+          );
+        }
+        die(json_encode($respuesta));
+      }//eliminar
+
 
 }//despues lo saco
+
+
     if(isset($_POST['login-admin'])){
           // die(json_encode($_POST));
           try {
             $stmt = $conn->prepare("SELECT * FROM admins WHERE usuario = ?;");
             $stmt->bind_param("s", $usuario);
             $stmt->execute();
-            $stmt->bind_result($id, $usr, $nom, $pas);
+            $stmt->bind_result($id, $usr, $nom, $pas, $edi);
             if($stmt->affected_rows){
               $existe = $stmt->fetch();
               if($existe){

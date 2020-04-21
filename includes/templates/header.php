@@ -30,15 +30,15 @@
     <!-- mis estilos -->
     <link rel="stylesheet" href="css/mis_css.css" />
 
+    <!-- fonts prueba -->
+    <link href="https://fonts.googleapis.com/css?family=Ma+Shan+Zheng&display=swap" rel="stylesheet">
 
 
-    <title>Noreste</title>
+
+    <title>Alejandra Nieres Nutricionista</title>
     <meta name="author" content="echeverria juan manuel">
-    <meta name="description" content="En NORESTE, nos dedicamos a la producción de Stencil para interiorismo y repostería.
-              Nuestras plantillas están pensadas para los aficionados que se permiten experimentar ponerse manos a la obra.
-              Dale un toque único a tu hogar con la línea de Deco Stencil.
-              Destacate y convertí la decoración de tu pastelería en original.">
-    <meta name="keywords" content="stencil, decoración, reposteria">
+    <meta name="description" content="Una nutrición saludable y llevar una dieta equilibrada es la clave para bajar de peso. Con nuestros planes alimentarios semanales y nutricionistas online vas a comer sano y rico. Ponerse en forma ahora es posible comiendo lo que te gusta.">
+    <meta name="keywords" content="nutrición saludable, dieta, bajar de peso, ponerse en forma, sano y rico, nutricionista online, buena alimentación, dieta saludable, nutricionista online">
   </head>
   <body>
     <!-- Header -->
@@ -47,7 +47,7 @@
           <div class="container barra_contenedor">
             <div id="logo" class="logo">
               <a href="index.php">
-                <img src="mis_images/logo.png" alt="logo">
+                <img src="mis_imagenes/logo.png" alt="logo">
               </a>
             </div>
 
@@ -62,26 +62,9 @@
               </nav>
               <nav class="navegacion-principal">
                 <ul class="menu-list list-inline">
-                  <li class="list-inline-item"><a href="index.php">Inicio</a></li>
-                  <li class="list-inline-item"><a href="nosotros.php">Nosotros</a></li>
-                  <li class="list-inline-item submenu"><a href="#" id="submenu1" class="submenu">Deco stencil +</a>
-                    <ul id="submenu1" class="submenu">
-                      <li class="list-inline-item"><a href="geometrico.php">Geometrico</a></li>
-                      <li class="list-inline-item"><a href="damasco.php">Damasco</a></li>
-                      <li class="list-inline-item"><a href="mandala.php">Mandala</a></li>
-                      <li class="list-inline-item"><a href="marruecos.php">Marruecos</a></li>
-                      <li class="list-inline-item"><a href="escandinavo.php">Escandinavo</a></li>
-                      <li class="list-inline-item"><a href="azulejo.php">Azulejo</a></li>
-                      <li class="list-inline-item"><a href="nautica.php">Nautica</a></li>
-                      <li class="list-inline-item"><a href="infantil.php">Infantil</a></li>
-                      <li class="list-inline-item"><a href="floral.php">Floral</a></li>
-                      <li class="list-inline-item"><a href="sellos.php">Sellos</a></li>
-                      <li class="list-inline-item"><a href="frases.php">Frases</a></li>
-                      <li class="list-inline-item"><a href="abc.php">ABC</a></li>
-
-                    </ul>
-                  </li>
-                  <li class="list-inline-item"><a href="#" id="submenu2" class="submenu">Repo stencil +</a>
+                  <li class="list-inline-item"><a href="#">Home</a></li>
+                  <li class="list-inline-item"><a href="#">Plan on-line</a></li>
+                  <li class="list-inline-item"><a href="#" id="submenu2" class="submenu">Recetas</a>
                     <ul id="submenu2" class="submenu">
                       <li class="list-inline-item"><a href="circulos.php">Circulos</a></li>
                       <li class="list-inline-item"><a href="guardas.php">Guardas</a></li>
@@ -89,7 +72,8 @@
                       <li class="list-inline-item"><a href="mini.php">mini Stencil</a></li>
                     </ul>
                   </li>
-                  <li class="list-inline-item"><a href="#contacto" class="ancla">Contacto</a></li>
+                  <li class="list-inline-item"><a href="#contacto" class="ancla">Contacto</a></li
+                  <li class="list-inline-item"><a class="nav-deco" href="#">Pedi un turno</a></li>
                 </ul>
               </nav>
             </div>

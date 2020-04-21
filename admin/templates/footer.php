@@ -37,5 +37,7 @@
 <!-- ajax -->
 <script src="./js/admin-ajax.js"></script>
 <script src="./js/mis_jquery.js"></script>
+
+
 </body>
 </html>

@@ -1,5 +1,5 @@
 <?php
-  // include_once "funciones/sesiones.php";
+  include_once "funciones/sesiones.php";
   include_once "funciones/funciones.php";
 
   include_once "templates/header.php";
@@ -86,23 +86,7 @@
 </div>
 <!-- /.content-wrapper -->
 
-<script>
-  $(function () {
-      // $("#example1").DataTable({
-      //   "responsive": true,
-      //   "autoWidth": false,
-      // });
-    $('#example2').DataTable({
-      "paging": true,
-      "lengthChange": false,
-      "searching": false,
-      "ordering": true,
-      "info": true,
-      "autoWidth": false,
-      "responsive": true,
-    });
-  });
-</script>
+
 
   <?php
     include_once "templates/footer.php";

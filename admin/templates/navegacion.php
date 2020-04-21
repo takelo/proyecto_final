@@ -16,7 +16,13 @@
         <img src="./img/user2-160x160.jpg" class="img-circle elevation-2" alt="User Image">
       </div>
       <div class="info">
-        <a href="#" class="d-block">USUARIO</a>
+        <a href="#" class="d-block">
+          <?php
+            // session_start();
+            echo $_SESSION['nombre'];
+
+          ?>
+        </a>
       </div>
     </div>
 
@@ -121,7 +127,7 @@
 
         <li class="nav-item has-treeview">
           <a href="#" class="nav-link">
-            <i class="nav-icon fas fa-copy"></i>
+          <i class="nav-icon fas fa-users-cog"></i>
             <p>
               Administradores
               <i class="fas fa-angle-left right"></i>
@@ -132,7 +138,7 @@
             <li class="nav-item">
               <a href="listar-admins.php" class="nav-link">
                 <i class="fas fa-list nav-icon"></i>
-                <p>Ver todas</p>
+                <p>Ver todos</p>
               </a>
             </li>
             <li class="nav-item">

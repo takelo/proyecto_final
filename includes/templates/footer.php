@@ -1,13 +1,12 @@
 <footer class="site-footer">
   <div class="container clearfix">
     <div class="footer-informacion">
-      <h3>NORESTE <span>FABRICANDO IDEAS</span></h3>
+      <h3>Alejandra Nieres <span>Nutricionista</span></h3>
       <ul>
         <li><i class="fas fa-envelope"></i>&nbsp;MAIL: <a href="mailto:noresteideas@gmail.com">noresteideas@gmail.com</a></li>
-        <li><i class="fab fa-whatsapp"></i>&nbsp;WHATSAPP: <a href="https://wa.me/5493434193899">+5493434193899</a></li>
+        <!-- <li><i class="fab fa-whatsapp"></i>&nbsp;WHATSAPP: <a href="https://wa.me/5493434599524">+5493434599524</a></li> -->
         <li><i class="fab fa-facebook"></i>&nbsp;FACEBOOK: <a href="https://www.facebook.com/Noreste-Fabricando-Ideas-2205327093130282/">facebook.com/norestefabricandoideas</a></li>
         <li><i class="fab fa-instagram"></i>&nbsp;INSTAGRAM: <a href="https://www.instagram.com/noresteideas/?hl=es-la">instagram.com/noresteideas</a></li>
-        <li><i class="fas fa-map-marker-alt"></i>&nbsp;UBICACIÓN: Paraná, E.R.</a></li>
         <!-- <li><i class="fas fa-clock"></i>&nbsp;HORARIOS: Lun a Vie – 7:00hs a 12:00hs y 16:00hs a 19:00hs</li> -->
       </ul>
     </div>
@@ -47,7 +46,6 @@
           <input class="btn btn-secondary btn-lg" type="submit" value="Enviar" class="special" />
 
         </form>
-          </form>
         </div>
   </div>
   <p class="copyright"><!-- Inserta esta etiqueta en la sección "head" o justo antes de la etiqueta "body" de cierre. -->

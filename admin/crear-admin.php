@@ -1,5 +1,5 @@
 <?php
-  // include_once "funciones/sesiones.php";
+  include_once "funciones/sesiones.php";
   include_once "funciones/funciones.php";
 
   include_once "templates/header.php";
@@ -50,6 +50,11 @@
               <label for="password">Password</label>
               <input type="password" class="form-control" id="password" name="password" placeholder="Password para ingresar...">
             </div>
+            <div class="form-group">
+              <label for="password">Repetir Password</label>
+              <input type="password" class="form-control" id="repetir_password" name="repetir_password" placeholder="Repita el Password para ingresar...">
+              <span id="resultado_password" class="help-block"></span>
+            </div>
 
 
           </div>
@@ -57,7 +62,7 @@
 
           <div class="card-footer">
             <input type="hidden" name="registro" value="nuevo">
-            <button type="submit" class="btn btn-primary">Añadir</button>
+            <button type="submit" id="boton_guardar" class="btn btn-primary">Añadir</button>
           </div>
         </form>
       </div>

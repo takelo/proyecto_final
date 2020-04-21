@@ -1,5 +1,5 @@
 <?php
-  // include_once "funciones/sesiones.php";
+  include_once "funciones/sesiones.php";
   include_once "funciones/funciones.php";
   $id = $_GET['id'];
   if(!filter_var($id, FILTER_VALIDATE_INT)){
@@ -24,7 +24,7 @@
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h1>Editar Administrado</h1>
+            <h1>Editar Administrador</h1>
           </div>
 
         </div>
@@ -36,7 +36,7 @@
 
       <div class="card card-primary">
         <div class="card-header">
-          <h3 class="card-title">Editar Administrador</h3>
+          <h3 class="card-title">Edita al administrador</h3>
         </div>
         <?php
           $sql = "SELECT * FROM admins WHERE id = $id";
@@ -62,6 +62,11 @@
               <label for="password">Password</label>
               <input type="password" class="form-control" id="password" name="password" placeholder="Password para ingresar...">
             </div>
+            <div class="form-group">
+              <label for="password">Repetir Password</label>
+              <input type="password" class="form-control" id="repetir_password" name="repetir_password" placeholder="Repita el Password para ingresar...">
+              <span id="resultado_password" class="help-block"></span>
+            </div>
 
 
           </div>
@@ -70,7 +75,7 @@
           <div class="card-footer">
             <input type="hidden" name="registro" value="actualizar">
             <input type="hidden" name="id_registro" value="<?php echo $id; ?>">
-            <button type="submit" class="btn btn-primary">Guardar</button>
+            <button type="submit" id="boton_guardar" class="btn btn-primary">Guardar</button>
           </div>
         </form>
       </div>
